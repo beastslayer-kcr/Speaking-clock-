@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: time_conversion_app.time_conversion_app.TimeConversionServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.107 s -- in time_conversion_app.time_conversion_app.TimeConversionServiceTest

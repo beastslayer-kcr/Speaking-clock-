@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Conversion</title>
+</head>
+<body>
+    <h1>Time Conversion</h1>
+    <form id="timeForm">
+        <label for="time">Enter Time (hh:mm):</label>
+        <input type="text" id="time" name="time" placeholder="e.g., 11:45" required>
+        <button type="submit">Convert</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('timeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get the input time value
+            var inputTime = document.getElementById('time').value;
+
+            // Send a GET request to the Spring Boot API
+            fetch('/api/time/convert?time=' + inputTime)
+                .then(response => response.text())
+                .then(data => {
+                    // Display the result in the 'result' div
+                    document.getElementById('result').textContent = data;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('result').textContent = 'An error occurred.';
+                });
+        });
+    </script>
+</body>
+</html>

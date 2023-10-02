@@ -1,0 +1,5 @@
+com\time_conversion_app\Application.class
+com\time_conversion_app\controller\TimeConversionController.class
+com\time_conversion_app\service\NumberToWords.class
+com\time_conversion_app\config\SwaggerConfig.class
+com\time_conversion_app\service\TimeConversionService.class
